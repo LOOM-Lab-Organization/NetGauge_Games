@@ -30,6 +30,13 @@ However, due to rate limiting, the code is set up to utilize mirrors, if needed.
 
 The code will always fetch the following information on the nearest POIs to the user: latitude, longitude, and radius. Optionally, this can also fetch the amenity type and associated tags. The desired number of POIs will be returned as a list, in order from closest to furthest from the user's location.
 
+If rate-limiting occurs and it cannot be mitigated by mirrors, if the user is simply not near an established POI, or if there are general challenges getting POIs, the games are still play-able. In these situations, the app will simulate POIs, having players move particular distances before they are notified that they have reached a "POI."
+
+## How Do Surveys Work?
+
+To reduce storage and support modularized research, we keep all survey questions on a Firebase database. The app pulls questions for surveys from their respective databases, presenting them to the user. Then, survey responses are sent back to Firebase.
+
+
 ## How Do I Add New Games to NetGauge?
 
 Currently, you need to manually adjust the code to add new games to the platform. However, we are currently working on an upgrade to add in new games via Firebase! (Coming Soon!)
